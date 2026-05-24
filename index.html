@@ -4,46 +4,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Greeting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet"
+  >
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.4.0/mdb.min.css"
+  >
   <style>
-    :root {
-      color-scheme: light dark;
-      font-family: Arial, sans-serif;
+    body {
+      min-height: 100vh;
+      font-family: "Roboto", sans-serif;
+      background: linear-gradient(135deg, #ede7f6 0%, #e3f2fd 50%, #e8f5e9 100%);
     }
 
-    body {
-      margin: 0;
+    .hero {
       min-height: 100vh;
+    }
+
+    .greeting-card {
+      max-width: 720px;
+      border-radius: 1.5rem;
+    }
+
+    .greeting-icon {
+      width: 88px;
+      height: 88px;
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg, #0f172a, #1d4ed8);
-    }
-
-    main {
-      padding: 3rem;
-      border-radius: 20px;
-      text-align: center;
-      background: rgba(255, 255, 255, 0.12);
-      color: #f8fafc;
-      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.35);
-      backdrop-filter: blur(12px);
-    }
-
-    h1 {
-      margin: 0 0 0.75rem;
-      font-size: clamp(2.5rem, 8vw, 4.5rem);
-    }
-
-    p {
-      margin: 0;
-      font-size: 1.1rem;
-      opacity: 0.9;
+      margin: 0 auto;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #5e35b1, #1e88e5);
+      color: #fff;
+      font-size: 2rem;
+      box-shadow: 0 0.75rem 1.5rem rgba(94, 53, 177, 0.28);
     }
   </style>
 </head>
 <body>
-  <main>
-    <h1>Hello, GitHub Pages!</h1>
-    <p>This is a simple greeting site published from this repository.</p>
+  <main class="container hero d-flex align-items-center justify-content-center py-5">
+    <section class="card greeting-card shadow-5-strong">
+      <div class="card-body p-4 p-md-5 text-center">
+        <div class="greeting-icon mb-4">
+          <i class="fas fa-hand-sparkles"></i>
+        </div>
+        <span class="badge rounded-pill badge-primary mb-3 px-3 py-2">Material Design + Bootstrap 5</span>
+        <h1 class="display-4 fw-bold mb-3 text-primary">Hello, GitHub Pages!</h1>
+        <p class="lead text-muted mb-4">
+          This greeting page now uses a Bootstrap 5 Material Design look powered by MDB UI Kit.
+        </p>
+        <a class="btn btn-primary btn-lg" href="https://github.com/hiroshi-murano/copilot1">
+          View Repository
+        </a>
+      </div>
+    </section>
   </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.4.0/mdb.umd.min.js"></script>
 </body>
 </html>
