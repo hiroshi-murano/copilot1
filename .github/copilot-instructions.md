@@ -1,11 +1,16 @@
 # Copilot Instructions
 
-## Repository state
+## Build and publish
 
-- This repository was empty when these instructions were generated: no source files, build manifests, test configuration, README, CONTRIBUTING guide, or other assistant instruction files were present under `Q:\src3\python_work\copilot1`.
-- No build, test, or lint commands are defined yet.
-- No high-level architecture or repository-specific coding conventions can be inferred yet.
+- This repository currently has no build, test, or lint tooling.
+- The site is published as a plain static page from the repository root via GitHub Pages.
 
-## How to use this file as the project grows
+## Architecture
 
-- Update this file when the first real project structure lands so future Copilot sessions can rely on the actual stack, commands, architecture, and conventions present in the repository.
+- `index.html` is the whole application. There is no framework, bundler, or asset pipeline.
+- GitHub Pages serves the root `index.html` directly, so changes to the page are made in-place and pushed to `main`.
+
+## Conventions
+
+- Keep the site self-contained unless the repository intentionally grows beyond a single-page static site.
+- Prefer simple HTML and inline CSS for small changes so the page remains easy to publish through GitHub Pages without extra tooling.
